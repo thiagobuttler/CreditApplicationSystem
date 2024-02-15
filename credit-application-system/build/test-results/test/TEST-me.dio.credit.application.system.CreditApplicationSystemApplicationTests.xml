@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="me.dio.credit.application.system.CreditApplicationSystemApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-02-15T00:30:16" hostname="THISWIFT" time="0.441">
+  <properties/>
+  <testcase name="contextLoads()" classname="me.dio.credit.application.system.CreditApplicationSystemApplicationTests" time="0.441"/>
+  <system-out><![CDATA[21:30:12.299 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [CreditApplicationSystemApplicationTests]: using SpringBootContextLoader
+21:30:12.303 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [me.dio.credit.application.system.CreditApplicationSystemApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+21:30:12.304 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [me.dio.credit.application.system.CreditApplicationSystemApplicationTests]: CreditApplicationSystemApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:30:12.327 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using ContextCustomizers for test class [CreditApplicationSystemApplicationTests]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer]
+21:30:12.394 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\Users\thiag\OneDrive\Área de Trabalho\Projetos\DIO\Sistema de Aplicação de Crédito\credit-application-system\build\classes\kotlin\main\me\dio\credit\application\system\CreditApplicationSystemApplication.class]
+21:30:12.396 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration me.dio.credit.application.system.CreditApplicationSystemApplication for test class me.dio.credit.application.system.CreditApplicationSystemApplicationTests
+21:30:12.576 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners for test class [CreditApplicationSystemApplicationTests]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
+21:30:12.578 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: class [CreditApplicationSystemApplicationTests], class annotated with @DirtiesContext [false] with mode [null]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.4)
+
+2024-02-14T21:30:12.860-03:00  INFO 2320 --- [    Test worker] .CreditApplicationSystemApplicationTests : Starting CreditApplicationSystemApplicationTests using Java 17.0.8 with PID 2320 (started by thiag in C:\Users\thiag\OneDrive\Área de Trabalho\Projetos\DIO\Sistema de Aplicação de Crédito\credit-application-system)
+2024-02-14T21:30:12.862-03:00  INFO 2320 --- [    Test worker] .CreditApplicationSystemApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2024-02-14T21:30:13.614-03:00  INFO 2320 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-14T21:30:13.639-03:00  INFO 2320 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+2024-02-14T21:30:14.093-03:00  INFO 2320 --- [    Test worker] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.5.1 by Redgate
+2024-02-14T21:30:14.094-03:00  INFO 2320 --- [    Test worker] o.f.c.internal.license.VersionPrinter    : See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2024-02-14T21:30:14.094-03:00  INFO 2320 --- [    Test worker] o.f.c.internal.license.VersionPrinter    : 
+2024-02-14T21:30:14.101-03:00  INFO 2320 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-14T21:30:14.274-03:00  INFO 2320 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:8a041920-0f7c-44d3-b9de-0ed5464c2a5c user=SA
+2024-02-14T21:30:14.276-03:00  INFO 2320 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-14T21:30:14.288-03:00  INFO 2320 --- [    Test worker] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:h2:mem:8a041920-0f7c-44d3-b9de-0ed5464c2a5c (H2 2.1)
+2024-02-14T21:30:14.330-03:00  INFO 2320 --- [    Test worker] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.004s)
+2024-02-14T21:30:14.330-03:00  WARN 2320 --- [    Test worker] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2024-02-14T21:30:14.335-03:00  INFO 2320 --- [    Test worker] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2024-02-14T21:30:14.362-03:00  INFO 2320 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2024-02-14T21:30:14.363-03:00  INFO 2320 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
+2024-02-14T21:30:14.454-03:00  INFO 2320 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-14T21:30:14.513-03:00  INFO 2320 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2024-02-14T21:30:14.818-03:00  INFO 2320 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-02-14T21:30:15.042-03:00  INFO 2320 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-02-14T21:30:15.050-03:00  INFO 2320 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-14T21:30:15.219-03:00  WARN 2320 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-14T21:30:15.996-03:00  INFO 2320 --- [    Test worker] .CreditApplicationSystemApplicationTests : Started CreditApplicationSystemApplicationTests in 3.346 seconds (process running for 4.664)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
