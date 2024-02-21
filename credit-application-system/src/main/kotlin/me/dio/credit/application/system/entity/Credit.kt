@@ -13,7 +13,7 @@ data class Credit(
     @Column(nullable = false) val creditValue: BigDecimal = BigDecimal.ZERO,
     @Column(nullable = false) val dayFirstOfInstallment: LocalDate,
     @Column(nullable = false) val numberOfInstallments: Int = 0,
-    @Enumerated(value = EnumType.STRING) val status: Status = Status.IN_PROGESS,
+    @Enumerated val status: Status = Status.IN_PROGRESS,
     /*@Enumerated(value = EnumType.STRING) val status: Status = Status.IN_PROGESS, para salvar o satus como texto no BD. Importante
     alterar tipo de dado na clonuda do BD nas migrations*/
     @ManyToOne var customer: Customer? = null,
