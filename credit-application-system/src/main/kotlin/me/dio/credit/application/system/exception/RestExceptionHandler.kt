@@ -16,8 +16,7 @@ class RestExceptionHandler {
     @ExceptionHandler(MethodArgumentNotValidException::class)
     fun handlerValidException(ex: MethodArgumentNotValidException): ResponseEntity<ExceptionDetails> {
         val erros: MutableMap<String, String> = HashMap()
-        ex.bindingResult.allErrors.stream().forEach {
-            erro: ObjectError ->
+        ex.bindingResult.allErrors.stream().forEach { erro: ObjectError ->
             val fieldName: String = (erro as FieldError).field
             val messageError: String? = erro.defaultMessage
             erros[fieldName] = messageError ?: "Unknown error"
@@ -53,5 +52,31 @@ class RestExceptionHandler {
                 details = mutableMapOf(ex.cause.toString() to ex.message)
             ), HttpStatus.CONFLICT
         )*/
+    }
+
+    @ExceptionHandler(BusinessException::class)
+    fun handlerValidException(ex: BusinessException): ResponseEntity<ExceptionDetails> {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(
+            ExceptionDetails(
+                title = "Bad Request! Consult the documentation",
+                timestamp = LocalDateTime.now(),
+                status = HttpStatus.BAD_REQUEST.value(),
+                exception = ex.javaClass.toString(),
+                details = mutableMapOf((ex.cause?.toString() ?: "Unknown cause") to (ex.message ?: "Unknown message"))
+            )
+        )
+    }
+
+    @ExceptionHandler(IllegalArgumentException::class)
+    fun handlerValidException(ex: IllegalArgumentException): ResponseEntity<ExceptionDetails> {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(
+            ExceptionDetails(
+                title = "Bad Request! Consult the documentation",
+                timestamp = LocalDateTime.now(),
+                status = HttpStatus.BAD_REQUEST.value(),
+                exception = ex.javaClass.toString(),
+                details = mutableMapOf((ex.cause?.toString() ?: "Unknown cause") to (ex.message ?: "Unknown message"))
+            )
+        )
     }
 }
