@@ -2,6 +2,7 @@ package me.dio.credit.application.system.controller
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import me.dio.credit.application.system.dto.CustomerDto
+import me.dio.credit.application.system.entity.Customer
 import me.dio.credit.application.system.repository.CustomerRepository
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
@@ -93,6 +94,21 @@ class CustomerResourceTest {
                     .value("class org.springframework.web.bind.MethodArgumentNotValidException")
             )
             .andExpect(MockMvcResultMatchers.jsonPath("$.details[*]").isNotEmpty)
+            .andDo(MockMvcResultHandlers.print())
+    }
+
+    @Test
+    fun `should find customer by id and return 200 status`() {
+        // given
+        val customer: Customer = customerRepository.save(builderCustomerDto().toEntity())
+        // when
+        // then
+        mockMvc.perform(MockMvcRequestBuilders
+            .get("$URL/${customer.id}")
+            .accept(MediaType.APPLICATION_JSON))
+            .andExpect(MockMvcResultMatchers.status().isOk)
+            .andExpect(MockMvcResultMatchers.jsonPath("$.firstName").value("Taylor"))
+            .andExpect(MockMvcResultMatchers.jsonPath("$.street").value("Cornelia Street, 13"))
             .andDo(MockMvcResultHandlers.print())
     }
 
