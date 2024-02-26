@@ -73,6 +73,29 @@ class CustomerResourceTest {
         //then
     }
 
+    @Test
+    fun `should not save a customer with firstName empty and return 409 status`() {
+        // given
+        val customerDto: CustomerDto = builderCustomerDto(firstName = "")
+        val valueAsString: String = objetcMapper.writeValueAsString(customerDto)
+        // when
+        // then
+        mockMvc.perform(MockMvcRequestBuilders.post(URL).content(valueAsString)
+            .content(valueAsString)
+            . contentType(MediaType.APPLICATION_JSON))
+            .andExpect(MockMvcResultMatchers.status().isBadRequest)
+            .andDo(MockMvcResultHandlers.print())
+            .andExpect(MockMvcResultMatchers.jsonPath("$.title").value("Bad Request! Consult the documentation"))
+            .andExpect(MockMvcResultMatchers.jsonPath("$.timestamp").exists())
+            .andExpect(MockMvcResultMatchers.jsonPath("$.status").value(400))
+            .andExpect(
+                MockMvcResultMatchers.jsonPath("$.exception")
+                    .value("class org.springframework.web.bind.MethodArgumentNotValidException")
+            )
+            .andExpect(MockMvcResultMatchers.jsonPath("$.details[*]").isNotEmpty)
+            .andDo(MockMvcResultHandlers.print())
+    }
+
     private fun builderCustomerDto(
         firstName: String = "Taylor",
         lastName: String = "Swift",
