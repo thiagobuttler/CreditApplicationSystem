@@ -143,7 +143,9 @@
     "Gradle.CreditRepositoryTest.should find all credits by customer id.executor": "Run",
     "Gradle.CreditRepositoryTest.should find credit by credit code.executor": "Run",
     "Gradle.CustomerResourceTest.should create a customer and return 201 status.executor": "Run",
+    "Gradle.CustomerResourceTest.should delete customer by id.executor": "Run",
     "Gradle.CustomerResourceTest.should find customer by id and return 200 status.executor": "Run",
+    "Gradle.CustomerResourceTest.should not delete customer by id and return 400 status.executor": "Run",
     "Gradle.CustomerResourceTest.should not find customer with invalid id and return 400 status.executor": "Run",
     "Gradle.CustomerResourceTest.should not save a customer with firstName empty and return 409 status.executor": "Run",
     "Gradle.CustomerResourceTest.should not save a customer with same CPF and return 409 status.executor": "Run",
@@ -177,8 +179,8 @@
       <recent name="me.dio.credit.application.system.enummeration" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CustomerResourceTest.should not find customer with invalid id and return 400 status">
-    <configuration name="CustomerResourceTest.should create a customer and return 201 status" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.CustomerResourceTest.should not delete customer by id and return 400 status">
+    <configuration name="CustomerResourceTest.should delete customer by id" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -191,7 +193,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;me.dio.credit.application.system.controller.CustomerResourceTest.should create a customer and return 201 status&quot;" />
+            <option value="&quot;me.dio.credit.application.system.controller.CustomerResourceTest.should delete customer by id&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -216,6 +218,30 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;me.dio.credit.application.system.controller.CustomerResourceTest.should find customer by id and return 200 status&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="CustomerResourceTest.should not delete customer by id and return 400 status" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;me.dio.credit.application.system.controller.CustomerResourceTest.should not delete customer by id and return 400 status&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -274,37 +300,13 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CustomerResourceTest.should not save a customer with same CPF and return 409 status" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;me.dio.credit.application.system.controller.CustomerResourceTest.should not save a customer with same CPF and return 409 status&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CustomerResourceTest.should not delete customer by id and return 400 status" />
+        <item itemvalue="Gradle.CustomerResourceTest.should delete customer by id" />
         <item itemvalue="Gradle.CustomerResourceTest.should not find customer with invalid id and return 400 status" />
         <item itemvalue="Gradle.CustomerResourceTest.should find customer by id and return 200 status" />
         <item itemvalue="Gradle.CustomerResourceTest.should not save a customer with firstName empty and return 409 status" />
-        <item itemvalue="Gradle.CustomerResourceTest.should not save a customer with same CPF and return 409 status" />
-        <item itemvalue="Gradle.CustomerResourceTest.should create a customer and return 201 status" />
       </list>
     </recent_temporary>
   </component>
