@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09c8e53d-6800-420a-8631-ca7502f8a94d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/me/dio/credit/application/system/entity/Credit.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/me/dio/credit/application/system/entity/Credit.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/me/dio/credit/application/system/repository/CreditRepositoryTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/me/dio/credit/application/system/repository/CreditRepositoryTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,6 +104,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.Build credit-application-system.executor": "Run",
+    "Gradle.CreditRepositoryTest.should find credit by credit code.executor": "Run",
     "Gradle.CustomerServiceTest.should create customer.executor": "Run",
     "Gradle.CustomerServiceTest.should delete customer by id.executor": "Run",
     "Gradle.CustomerServiceTest.should find customer by id.executor": "Run",
@@ -132,7 +135,31 @@
       <recent name="me.dio.credit.application.system.enummeration" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CustomerServiceTest.should delete customer by id">
+  <component name="RunManager" selected="Gradle.CreditRepositoryTest.should find credit by credit code">
+    <configuration name="CreditRepositoryTest.should find credit by credit code" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;me.dio.credit.application.system.repository.CreditRepositoryTest.should find credit by credit code&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="CustomerServiceTest.should create customer" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -229,35 +256,13 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="credit-application-system [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="dependencies" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CreditRepositoryTest.should find credit by credit code" />
         <item itemvalue="Gradle.CustomerServiceTest.should delete customer by id" />
         <item itemvalue="Gradle.CustomerServiceTest.should not find customer by id and throw BusinessException" />
         <item itemvalue="Gradle.CustomerServiceTest.should find customer by id" />
         <item itemvalue="Gradle.CustomerServiceTest.should create customer" />
-        <item itemvalue="Gradle.credit-application-system [dependencies]" />
       </list>
     </recent_temporary>
   </component>
