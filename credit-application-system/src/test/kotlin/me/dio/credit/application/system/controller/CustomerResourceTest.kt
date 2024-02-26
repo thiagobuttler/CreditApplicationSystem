@@ -2,6 +2,7 @@ package me.dio.credit.application.system.controller
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import me.dio.credit.application.system.dto.CustomerDto
+import me.dio.credit.application.system.dto.CustomerUpdateDto
 import me.dio.credit.application.system.entity.Customer
 import me.dio.credit.application.system.repository.CustomerRepository
 import org.junit.jupiter.api.AfterEach
@@ -173,6 +174,25 @@ class CustomerResourceTest {
             .andDo(MockMvcResultHandlers.print())
     }
 
+    @Test
+    fun `should update a customer and return status 200`() {
+        // given
+        val customer: Customer= customerRepository.save(builderCustomerDto().toEntity())
+        val customerUpdateDto: CustomerUpdateDto = builderCustomerUpdateDto()
+        var valueAsString: String = objetcMapper.writeValueAsString(customerUpdateDto)
+        // when
+        // then
+        mockMvc.perform(
+            MockMvcRequestBuilders
+                .patch("$URL?customerId=${customer.id}")
+                .contentType(MediaType.APPLICATION_JSON)
+            .content(valueAsString))
+            .andExpect(MockMvcResultMatchers.status().isOk)
+            .andExpect(MockMvcResultMatchers.jsonPath("$.firstName").value("TaylorUpdate"))
+            .andExpect(MockMvcResultMatchers.jsonPath("$.street").value("Cornelia Updated Street"))
+            .andDo(MockMvcResultHandlers.print())
+    }
+
     private fun builderCustomerDto(
         firstName: String = "Taylor",
         lastName: String = "Swift",
@@ -189,6 +209,20 @@ class CustomerResourceTest {
         email = email,
         income = income,
         password = password,
+        zipCode = zipCode,
+        street = street
+    )
+
+    private fun builderCustomerUpdateDto(
+        firstName: String = "TaylorUpdate",
+        lastName: String = "SwiftUpdate",
+        income: BigDecimal = BigDecimal.valueOf(1100000000.0),
+        zipCode: String = "1313",
+        street: String = "Cornelia Updated Street"
+    ): CustomerUpdateDto = CustomerUpdateDto(
+        firstName = firstName,
+        lastName = lastName,
+        income = income,
         zipCode = zipCode,
         street = street
     )
