@@ -59,6 +59,7 @@ class CustomerResourceTest {
         val customerDto: CustomerDto = builderCustomerDto()
         val valueAsString: String = objetcMapper.writeValueAsString(customerDto)
         //when
+        //then
         mockMvc.perform(MockMvcRequestBuilders.post(URL)
             .contentType(MediaType.APPLICATION_JSON)
             .content(valueAsString))
@@ -73,7 +74,6 @@ class CustomerResourceTest {
             )
             .andExpect(MockMvcResultMatchers.jsonPath("$.details[*]").isNotEmpty)
             .andDo(MockMvcResultHandlers.print())
-        //then
     }
 
     @Test
