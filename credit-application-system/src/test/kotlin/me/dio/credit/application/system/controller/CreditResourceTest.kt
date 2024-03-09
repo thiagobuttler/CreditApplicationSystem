@@ -16,6 +16,7 @@ import org.springframework.test.context.ActiveProfiles
 import org.springframework.test.context.ContextConfiguration
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
+import org.springframework.test.web.servlet.result.MockMvcResultHandlers
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers
 import java.math.BigDecimal
 import java.time.LocalDate
@@ -53,6 +54,21 @@ class CreditResourceTest {
         // then
         mockMvc.perform(MockMvcRequestBuilders.post(URL).contentType(MediaType.APPLICATION_JSON).content(valueAsString))
             .andExpect(MockMvcResultMatchers.status().isCreated)
+    }
+
+    @Test
+    fun `should not create a credit for non-existent customer and return 400 status`() {
+        // given
+        customerRepository.deleteAll()
+        val creditDto: CreditDto = builderCreditDto()
+        val valueAsString: String = objectMapper.writeValueAsString(creditDto)
+        // when
+        // then
+        mockMvc.perform(MockMvcRequestBuilders.post(URL)
+            .contentType(MediaType.APPLICATION_JSON)
+            .content(valueAsString))
+            .andExpect(MockMvcResultMatchers.status().isBadRequest)
+            .andDo(MockMvcResultHandlers.print())
     }
 
     private fun builderCreditDto(
