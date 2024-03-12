@@ -3,6 +3,7 @@ package me.dio.credit.application.system.controller
 import com.fasterxml.jackson.databind.ObjectMapper
 import me.dio.credit.application.system.dto.CreditDto
 import me.dio.credit.application.system.dto.CustomerDto
+import me.dio.credit.application.system.entity.Credit
 import me.dio.credit.application.system.repository.CreditRepository
 import me.dio.credit.application.system.repository.CustomerRepository
 import org.junit.jupiter.api.AfterEach
@@ -67,6 +68,36 @@ class CreditResourceTest {
         mockMvc.perform(MockMvcRequestBuilders.post(URL)
             .contentType(MediaType.APPLICATION_JSON)
             .content(valueAsString))
+            .andExpect(MockMvcResultMatchers.status().isBadRequest)
+            .andDo(MockMvcResultHandlers.print())
+    }
+
+    @Test
+    fun `should find all credits by customer id and return 200 status`() {
+        // given
+        val credit: Credit = creditRepository.save(builderCreditDto().toEntity())
+        val customerId: Long = 1L
+        // when
+        // then
+        mockMvc.perform(MockMvcRequestBuilders
+            .get("$URL?customerId=$customerId")
+            .accept(MediaType.APPLICATION_JSON)
+        )
+            .andExpect(MockMvcResultMatchers.status().isOk)
+            .andDo(MockMvcResultHandlers.print())
+    }
+
+    @Test
+    fun `should not find all credits for invalid customer id and return 400 status`() {
+        // givem
+        val credit: Credit = creditRepository.save(builderCreditDto().toEntity())
+        val invalidCustomerId: Long = 10L
+        // when
+        // then
+        mockMvc.perform(MockMvcRequestBuilders
+            .get("$URL?customerId=$invalidCustomerId")
+            .accept(MediaType.APPLICATION_JSON)
+        )
             .andExpect(MockMvcResultMatchers.status().isBadRequest)
             .andDo(MockMvcResultHandlers.print())
     }
