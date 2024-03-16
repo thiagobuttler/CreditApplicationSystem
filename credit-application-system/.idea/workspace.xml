@@ -34,18 +34,13 @@
       <change beforePath="$PROJECT_DIR$/build/kotlin/compileTestKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileTestKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.len" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/kotlin/compileTestKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileTestKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.values.at" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/kotlin/compileTestKotlin/cacheable/caches-jvm/lookups/lookups.tab" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileTestKotlin/cacheable/caches-jvm/lookups/lookups.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileTestKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileTestKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileTestKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileTestKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream.len" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileTestKotlin/cacheable/caches-jvm/lookups/lookups.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileTestKotlin/cacheable/caches-jvm/lookups/lookups.tab.len" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/kotlin/compileTestKotlin/cacheable/caches-jvm/lookups/lookups.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileTestKotlin/cacheable/caches-jvm/lookups/lookups.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileTestKotlin/cacheable/caches-jvm/lookups/lookups.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileTestKotlin/cacheable/caches-jvm/lookups/lookups.tab_i" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/kotlin/compileTestKotlin/cacheable/last-build.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileTestKotlin/cacheable/last-build.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/kotlin/compileTestKotlin/local-state/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileTestKotlin/local-state/build-history.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/me/dio/credit/application/system/service/impl/CreditService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/me/dio/credit/application/system/service/impl/CreditService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/me/dio/credit/application/system/controller/CreditResourceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/me/dio/credit/application/system/controller/CreditResourceTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -147,6 +142,8 @@
     "Gradle.CreditResourceTest.should create a credit and return 201 status.executor": "Run",
     "Gradle.CreditResourceTest.should find all credits by customer id and return 200 status.executor": "Run",
     "Gradle.CreditResourceTest.should find all credits by customer id and return 201 status.executor": "Run",
+    "Gradle.CreditResourceTest.should find credit by code and return 200 status.executor": "Run",
+    "Gradle.CreditResourceTest.should find credit by code and return 201 status.executor": "Run",
     "Gradle.CreditResourceTest.should not create a credit for non-existent customer and return 409 status.executor": "Run",
     "Gradle.CreditResourceTest.should not find all credits for invalid customer id and return 400 status.executor": "Run",
     "Gradle.CustomerResourceTest.should create a customer and return 201 status.executor": "Run",
@@ -189,7 +186,7 @@
       <recent name="me.dio.credit.application.system.enummeration" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CreditResourceTest.should not find all credits for invalid customer id and return 400 status">
+  <component name="RunManager" selected="Gradle.CreditResourceTest.should find credit by code and return 200 status">
     <configuration name="CreditResourceTest.should find all credits by customer id and return 200 status" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -214,7 +211,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CreditResourceTest.should find all credits by customer id and return 201 status" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CreditResourceTest.should find credit by code and return 200 status" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -227,7 +224,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;me.dio.credit.application.system.controller.CreditResourceTest.should find all credits by customer id and return 201 status&quot;" />
+            <option value="&quot;me.dio.credit.application.system.controller.CreditResourceTest.should find credit by code and return 200 status&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -238,7 +235,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CreditResourceTest.should not create a credit for non-existent customer and return 409 status" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CreditResourceTest.should find credit by code and return 201 status" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -251,7 +248,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;me.dio.credit.application.system.controller.CreditResourceTest.should not create a credit for non-existent customer and return 409 status&quot;" />
+            <option value="&quot;me.dio.credit.application.system.controller.CreditResourceTest.should find credit by code and return 201 status&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -295,11 +292,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CreditResourceTest.should not find all credits for invalid customer id and return 400 status" />
+        <item itemvalue="Gradle.CreditResourceTest.should find credit by code and return 200 status" />
         <item itemvalue="Kotlin.CreditApplicationSystemApplicationKt" />
+        <item itemvalue="Gradle.CreditResourceTest.should find credit by code and return 201 status" />
+        <item itemvalue="Gradle.CreditResourceTest.should not find all credits for invalid customer id and return 400 status" />
         <item itemvalue="Gradle.CreditResourceTest.should find all credits by customer id and return 200 status" />
-        <item itemvalue="Gradle.CreditResourceTest.should find all credits by customer id and return 201 status" />
-        <item itemvalue="Gradle.CreditResourceTest.should not create a credit for non-existent customer and return 409 status" />
       </list>
     </recent_temporary>
   </component>

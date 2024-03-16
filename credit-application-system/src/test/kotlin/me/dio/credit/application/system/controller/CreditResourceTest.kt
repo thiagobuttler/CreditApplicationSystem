@@ -102,6 +102,18 @@ class CreditResourceTest {
             .andDo(MockMvcResultHandlers.print())
     }
 
+    @Test
+    fun `should find credit by code and return 200 status`() {
+        val credit: Credit = creditRepository.save(builderCreditDto().toEntity())
+
+        val creditCode = credit.creditCode
+        mockMvc.perform(MockMvcRequestBuilders
+            .get("$URL/$creditCode?customerId=1")
+            .accept(MediaType.APPLICATION_JSON)
+        )
+            .andExpect(MockMvcResultMatchers.status().isOk)
+    }
+
     private fun builderCreditDto(
         creditValue: BigDecimal = BigDecimal("10000.0"),
         dayFirstOfInstallment: LocalDate = LocalDate.of(2024, 3, 10),
